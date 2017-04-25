@@ -1,1 +1,2 @@
-"I
+Word
+Word that is now concatenated

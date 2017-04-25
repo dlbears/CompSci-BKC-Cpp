@@ -9,9 +9,13 @@ int main() {
     string name; //This is a string variable
     
     in >> name; // from file (each call goes down a line)
-    out << name; // to a file (on a new line)
+    out << name << endl; // to a file (on a new line)
 
-    cin >> name; // prompts for input from console 
-    cout << name; // to console 
-     
+    //cin >> name; prompts for input from console 
+    //cout << name;  to console 
+
+     //String concatination
+
+     name += " that is now concatenated";
+     out << name << endl;
 }

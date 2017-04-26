@@ -13,9 +13,10 @@ void howFarAway(int, double, double[], double[]);
 
 int main() {
   int size;
+  in >> size;
+  
   double first[size], second[size], avg;
 
-  in >> size;
   readData(size, first);
   out << "Original Array:\n"; 
   printArray(size, first);
@@ -23,33 +24,43 @@ int main() {
   out << "\nAverage: " << avg;
   closestAndFurthest(size, avg, first);
   howFarAway(size, avg, first, second);
-  printArray(size, first);
+  out << "New Array:\n";
+  printArray(size, second);
+  out << "\nNew Average: " << findAverage(size, second);
 }
 
-int readData(int n, double numbers[]) {
+void readData(int n, double numbers[]) {
   for(int i = 0; i < n; i++) in >> numbers[i];
 }
 
 void printArray(int q, double numb[]) {
-  for(int i = 0; i < q; i++) out << numbs[i] << (((i+1) % 5 == 0) ? "\n" : " ");
+  out << fixed << "\t";
+  out.precision(2);
+  for(int i = 0; i < q; i++) out << numb[i] << (((i+1) % 5 == 0) ? "\n\t" : " ");
 }
 
 double findAverage(int k, double p[]) {
-  double sum;
+  double sum = 0;
   for(int i = 0; i < k; i++) sum += p[i];
-  return sum / k;
+  return (sum / k);
 }
 
 void closestAndFurthest(int q, double avg, double p[]) {
-  double closest = 1000, furthest = 0;
+  double closest[2] = {1000, 1000}, furthest[2] = {0, 0};
   for(int i = 0; i < q; i++) {
-    double absVal = (((avg-p[i]) < 0) ? p[i]-avg : avg-p[i]);
-    closest = ((absVal < closest) ? p[i] : closest);
-    furthest = ((absVal > furthest) ? p[i] : furthest);
+    double absVal = (((avg-p[i]) < 0) ? (p[i] - avg) : (avg - p[i]));
+    if (absVal < closest[0]){
+        closest[1] = p[i];
+        closest[0] = absVal;   
+    }
+    if (absVal > furthest[0]){
+        furthest[1] = p[i];
+        furthest[0] = absVal;
+    }
   }
-  out << "\nFurthest from the average: " << furthest << "\nClosest to the average: " << closest << endl;
+  out << "\nFurthest from the average: " << furthest[1] << "\nClosest to the average: " << closest[1] << endl;
 }
 
 void howFarAway(int m, double avg, double r[], double s[]) {
-  for(int i = 0; i < m; i++) s[i] = r[i] - avg;
+  for(int i = 0; i < m; i++) s[i] = (r[i] - avg);
 }

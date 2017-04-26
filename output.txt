@@ -1,5 +1,10 @@
+Printing using string type variables: 
 Word
+
+Concatinating String literals onto String variables with +=
 Word that is now concatenated
+
+Looping through strings like arrays, using the length function, array-access-notation and for-loop
 w
 o
 r

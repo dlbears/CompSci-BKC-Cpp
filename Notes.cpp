@@ -13,21 +13,37 @@ int main() {
     // cin >> name; prompts for input from console 
     // cout << name;  to console 
 
+    //String!!
     out << "\nConcatinating String literals onto String variables with +=\n";
-     // String concatination
+     // Concatination 
          name += " that is now concatenated";
          out << name << endl; // Word that is now concatenated;
 
-     // String access/editing
+     // Accessing and Assigning ~ string[int];
          name[0] = 'w'; // word that is now concatenated
      
      /* 
-     String length function returns the length of the string - \0 (at the end) 
-     string::size_type, subset of int that only allows positive values
+     String.length(void) function  -  returns the length of the string minus the null byte (\0 at the end) 
+     string::size_type  -  subset of int that only allows positive values
      */
         string::size_type strLen = name.length(); 
      
      out << "\nLooping through strings like arrays, using the length function, array-access-notation and for-loop\n";
-     //Print out each char on its own line
+     // Looping over strings like arrays
         for(int i = 0; i < strLen; i++) out << name[i] << endl;    
+
+    /* 
+    String.find(char, int) function  -  finds the location of a char in a string and returns the location, starting from a position
+    string::npos  -  npos is equal to -1; indicates no matches found from the find function
+    */
+    int count = 0;
+    int pos = 0;
+    char someChar = 'e';
+    string der = "This egg is yellow!";
+    out << "\nLoop on a string find function, to find each unique occurence of the char 'e'\nin string: " << der;
+    do {
+        pos = der.find(someChar, pos+1); 
+        count = (pos == string::npos) ? count : count+1;
+    } while(pos != string::npos);
+    out << "\nThe total number of e's is/are: " << count;
 }

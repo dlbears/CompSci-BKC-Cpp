@@ -34,3 +34,7 @@ a
 t
 e
 d
+
+Loop on a string find function, to find each unique occurence of the char 'e'
+in string: This egg is yellow!
+The total number of e's is/are: 2

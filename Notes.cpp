@@ -46,4 +46,22 @@ int main() {
         count = (pos == string::npos) ? count : count+1;
     } while(pos != string::npos);
     out << "\nThe total number of e's is/are: " << count;
+
+    /* 
+    String.erase(int, int)  -  start position and number of chars to erase 
+    String.insert(int, string)  -  start position, string to insert
+    String.replace(int, int, string)  -  start position, number to remove, string to insert 
+    */
+
+    string eraseMe = "Erase Me!";
+    out << "\n\nBefore: " << eraseMe;
+    
+    eraseMe.erase(0, eraseMe.length() - 1);
+    out << "\nAfter Erase: " << eraseMe;
+
+    eraseMe.insert(0, "Replace Me");
+    out << "\nAfter Insert: " << eraseMe; 
+
+    eraseMe.replace(0, eraseMe.length() - 1, "I have been replaced");
+    out << "\nAfter Replace: " << eraseMe;
 }

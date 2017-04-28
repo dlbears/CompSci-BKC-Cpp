@@ -23,7 +23,7 @@ int main() {
          name[0] = 'w'; // word that is now concatenated
      
      /* 
-     String.length(void) function  -  returns the length of the string minus the null byte (\0 at the end) 
+     String.length(void) function  -  returns the length of the string  
      string::size_type  -  subset of int that only allows positive values
      */
         string::size_type strLen = name.length(); 
@@ -68,7 +68,7 @@ int main() {
     out << "\nAfter Replace: " << eraseMe;
 
     out << "\n\nAnd one that does not mutate, but returns a new string";
-    
+
     string subString = eraseMe.substr(0, 6);
     out << "\n\"" << subString << "\" is a substring of: \"" << eraseMe << "\"";
 }

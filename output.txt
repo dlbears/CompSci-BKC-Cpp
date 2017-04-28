@@ -39,7 +39,11 @@ Loop on a string find function, to find each unique occurence of the char 'e'
 in string: This egg is yellow!
 The total number of e's is/are: 2
 
+A bunch of string functions that mutate: 
 Before: Erase Me!
 After Erase: !
 After Insert: Replace Me!
 After Replace: I have been replaced!
+
+And one that does not mutate, but returns a new string
+"I have" is a substring of: "I have been replaced!"

@@ -33,7 +33,7 @@ int main() {
         for(int i = 0; i < strLen; i++) out << name[i] << endl;    
 
     /* 
-    String.find(char, int) function  -  finds the location of a char in a string and returns the location, starting from a position
+    String.find(char, int) function  -  finds the location of a char in a string and returns the location integer, starting from a position
     string::npos  -  npos is equal to -1; indicates no matches found from the find function
     */
     int count = 0;
@@ -48,14 +48,16 @@ int main() {
     out << "\nThe total number of e's is/are: " << count;
 
     /* 
-    String.erase(int, int)  -  start position and number of chars to erase 
-    String.insert(int, string)  -  start position, string to insert
-    String.replace(int, int, string)  -  start position, number to remove, string to insert 
+    String.erase(int, int)  -  start position and number of chars to erase, mutates the original
+    String.insert(int, string)  -  start position, string to insert, mutates the original
+    String.replace(int, int, string)  -  start position, number to remove, string to insert, mutates the original 
+    String.substr(int, int)  -  start position, number of chars, returns a new string
     */
+    out << "\n\nA bunch of string functions that mutate: ";
 
     string eraseMe = "Erase Me!";
-    out << "\n\nBefore: " << eraseMe;
-    
+    out << "\nBefore: " << eraseMe;
+
     eraseMe.erase(0, eraseMe.length() - 1);
     out << "\nAfter Erase: " << eraseMe;
 
@@ -64,4 +66,9 @@ int main() {
 
     eraseMe.replace(0, eraseMe.length() - 1, "I have been replaced");
     out << "\nAfter Replace: " << eraseMe;
+
+    out << "\n\nAnd one that does not mutate, but returns a new string";
+    
+    string subString = eraseMe.substr(0, 6);
+    out << "\n\"" << subString << "\" is a substring of: \"" << eraseMe << "\"";
 }

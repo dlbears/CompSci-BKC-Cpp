@@ -1,0 +1,199 @@
+Dennis Orsini Assignment 4
+
+	SAT Scores: 600, 1000, 300
+	The group data is not valid.
+
+
+	SAT Scores: 750, 780, 800
+	The group data is valid.
+	The score is between 500 and 800.
+	The score is between 500 and 800.
+	The score is 800, a perfect score.
+	The sum for this group is: 2330
+	The group status is: outstanding
+
+
+	SAT Scores: 690, 780, 790
+	The group data is valid.
+	The score is between 500 and 800.
+	The score is between 500 and 800.
+	The score is between 500 and 800.
+	The sum for this group is: 2260
+	The group status is: very good
+
+
+	SAT Scores: 102, 234, 222
+	The group data is not valid.
+
+
+	SAT Scores: 800, 690, 690
+	The group data is valid.
+	The score is 800, a perfect score.
+	The score is between 500 and 800.
+	The score is between 500 and 800.
+	The sum for this group is: 2180
+	The group status is: lop-sided
+
+
+	SAT Scores: 490, 480, 470
+	The group data is valid.
+	The score is less than 500.
+	The score is less than 500.
+	The score is less than 500.
+	The sum for this group is: 1440
+	The group status is: weak
+
+
+	SAT Scores: 250, 280, 300
+	The group data is valid.
+	The score is less than 500.
+	The score is less than 500.
+	The score is less than 500.
+	The sum for this group is: 830
+	The group status is: weak
+
+
+	SAT Scores: 799, 800, 801
+	The group data is not valid.
+
+
+	SAT Scores: 675, 844, 700
+	The group data is not valid.
+
+
+	SAT Scores: 700, 600, 430
+	The group data is valid.
+	The score is between 500 and 800.
+	The score is between 500 and 800.
+	The score is less than 500.
+	The sum for this group is: 1730
+	The group status is: weak
+
+
+	SAT Scores: 220, 480, 770
+	The group data is valid.
+	The score is less than 500.
+	The score is less than 500.
+	The score is between 500 and 800.
+	The sum for this group is: 1470
+	The group status is: weak
+
+
+	SAT Scores: 550, 430, 220
+	The group data is valid.
+	The score is between 500 and 800.
+	The score is less than 500.
+	The score is less than 500.
+	The sum for this group is: 1200
+	The group status is: weak
+
+
+	SAT Scores: 199, 200, 201
+	The group data is not valid.
+
+
+	SAT Scores: 550, 770, 420
+	The group data is valid.
+	The score is between 500 and 800.
+	The score is between 500 and 800.
+	The score is less than 500.
+	The sum for this group is: 1740
+	The group status is: weak
+
+
+	SAT Scores: 520, 770, 530
+	The group data is valid.
+	The score is between 500 and 800.
+	The score is between 500 and 800.
+	The score is between 500 and 800.
+	The sum for this group is: 1820
+	The group status is: erratic
+
+
+	SAT Scores: 210, 790, 660
+	The group data is valid.
+	The score is less than 500.
+	The score is between 500 and 800.
+	The score is between 500 and 800.
+	The sum for this group is: 1660
+	The group status is: weak
+
+
+	SAT Scores: 330, 460, 770
+	The group data is valid.
+	The score is less than 500.
+	The score is less than 500.
+	The score is between 500 and 800.
+	The sum for this group is: 1560
+	The group status is: weak
+
+
+	SAT Scores: 876, 185, 600
+	The group data is not valid.
+
+
+	SAT Scores: 760, 770, 780
+	The group data is valid.
+	The score is between 500 and 800.
+	The score is between 500 and 800.
+	The score is between 500 and 800.
+	The sum for this group is: 2310
+	The group status is: outstanding
+
+
+	SAT Scores: 320, 510, 800
+	The group data is valid.
+	The score is less than 500.
+	The score is between 500 and 800.
+	The score is 800, a perfect score.
+	The sum for this group is: 1630
+	The group status is: weak
+
+
+	SAT Scores: 800, 650, 220
+	The group data is valid.
+	The score is 800, a perfect score.
+	The score is between 500 and 800.
+	The score is less than 500.
+	The sum for this group is: 1670
+	The group status is: weak
+
+
+	SAT Scores: 500, 985, 250
+	The group data is not valid.
+
+
+	SAT Scores: 450, 350, 780
+	The group data is valid.
+	The score is less than 500.
+	The score is less than 500.
+	The score is between 500 and 800.
+	The sum for this group is: 1580
+	The group status is: weak
+
+
+	SAT Scores: 690, 230, 220
+	The group data is valid.
+	The score is between 500 and 800.
+	The score is less than 500.
+	The score is less than 500.
+	The sum for this group is: 1140
+	The group status is: weak
+
+
+	SAT Scores: 234, 232, 986
+	The group data is not valid.
+
+
+	SAT Scores: 540, 550, 330
+	The group data is valid.
+	The score is between 500 and 800.
+	The score is between 500 and 800.
+	The score is less than 500.
+	The sum for this group is: 1420
+	The group status is: weak
+
+
+Total number of groups processed: 26
+Number of valid groups: 18
+Number of invalid groups: 8

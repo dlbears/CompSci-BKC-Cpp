@@ -33,10 +33,8 @@ void doStuff (void) {
     out << "What if we add 2 to just2 ? : " << add(just2(), 2) << endl;
     result = multiply(add(just2(), 2), 2);
     out << "Now what if we multiply that result by 2 : " << result << "\n\n";
+    return;
 }
-
-
-
 
 
 int main() {
@@ -94,6 +92,7 @@ int main() {
     3 columns, 2 rows 
     */
 
+    // Run outside functions within main
     doStuff();
 
     string name; // This is a string variable

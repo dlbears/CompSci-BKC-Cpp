@@ -1,3 +1,34 @@
+
+1 squared is 1
+2 squared is 4
+3 squared is 9
+4 squared is 16
+5 squared is 25
+6 squared is 36
+7 squared is 49
+8 squared is 64
+9 squared is 81
+
+Number is: 10
+Number is: 9
+Number is: 8
+Number is: 7
+Number is: 6
+Number is: 5
+Number is: 4
+Number is: 3
+Number is: 2
+Number is: 1
+Condition failed, loop left
+
+Number is equal to: 0
+
+ID: 123 Pay: 1500
+
+just2 is equal to: 2
+What if we add 2 to just2 ? : 4
+Now what if we multiply that result by 2 : 8
+
 Printing using string type variables: 
 Word
 

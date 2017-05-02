@@ -7,17 +7,16 @@ multi-line comment
 #include <cmath> //cmath library fabs = absolute value, sqrt = square root
 using namespace std;
 
-/*
-
 int main()
-{   int number, square;
+{   
+    int number, square;
     number = 4;
     square = number * number;
     cout << number << " squared is" << square << endl;
     // ...loop up until 10
 
     // in for-loop form ->
-    for(int x = 4; x < 10; x++) { //for(initialized variable; condition to check; increment)
+    for(int x = 1; x < 10; x++) { // for(initialized variable; condition to check; increment)
     cout << x << " squared is " << x*x << endl;
     }
 

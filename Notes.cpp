@@ -52,6 +52,7 @@ int main() {
     String.insert(int, string)  -  start position, string to insert, mutates the original
     String.replace(int, int, string)  -  start position, number to remove, string to insert, mutates the original 
     String.substr(int, int)  -  start position, number of chars, returns a new string
+    String.clear(void)   -  mutates the original string and make it an empty string.
     */
     out << "\n\nA bunch of string functions that mutate: ";
 
@@ -71,4 +72,9 @@ int main() {
 
     string subString = eraseMe.substr(0, 6);
     out << "\n\"" << subString << "\" is a substring of: \"" << eraseMe << "\"";
+
+    out << "\n\nsubString before clear: \"" << subString << "\"\nsubString after clear: \"";
+    subString.clear();
+    out << subString << "\"";
+
 }

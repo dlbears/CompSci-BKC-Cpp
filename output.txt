@@ -47,3 +47,6 @@ After Replace: I have been replaced!
 
 And one that does not mutate, but returns a new string
 "I have" is a substring of: "I have been replaced!"
+
+subString before clear: "I have"
+subString after clear: ""

@@ -9,7 +9,7 @@ using namespace std; // instead of constantly std::cout or std::cin
 ofstream out("output.txt"); // output stream to a file "output", like cout but to a file
 ifstream in("input.txt"); // input stream like cin, but from a file
 
-// Functions
+// Functions  -  reusable pieces of code that can take arguments
 int just2 (void); // just2 :: void -> int (takes no arguments and returns an int)
 int add (int, int); // add :: int -> int -> int (takes two integers and returns and integer)
 int multiply (int, int); // multiply :: int -> int -> int 

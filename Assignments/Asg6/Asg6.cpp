@@ -12,6 +12,7 @@ using namespace std;
 ifstream in("input.txt");
 void readData (int&, int[], int[]);
 void printData (int, int[], int[]);
+void arraySort (int, int[], int[]);
 void addData (int&, int[], int[]);
 int arrayFind (int, int, int[]);
 

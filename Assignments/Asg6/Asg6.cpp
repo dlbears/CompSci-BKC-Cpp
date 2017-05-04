@@ -61,7 +61,7 @@ void addData (int& x, int y[], int z[]) {
                 x++;
             } else {
                 cout << "\nSorry no new accounts may be added.";
-                return;
+                break;
             }
         }
         cout << "\n\nAny more data? (Y/N) ";
@@ -88,8 +88,8 @@ int main() {
     
     addData(n, idNumbers, donations);
     cout << "\n\nSORTED BY ID AFTER ADDITIONS\n";
-    printData(n, idNumbers, donations);
     arraySort(n, idNumbers, donations);
+    printData(n, idNumbers, donations);
 
     cout << "\n\nAFTER DONATION SORT\n";
     arraySort(n, donations ,idNumbers);
@@ -97,3 +97,153 @@ int main() {
 
     return 0;
 }
+
+/* input.txt:
+15
+500 123123
+453 523443
+512 236334
+123 543121
+122 662353
+473 123555
+363 987965
+986 243632
+668 333333
+555 757999
+998 153422
+173 666634
+265 286356
+789 842698
+234 347977
+
+
+cout:
+
+BEFORE SORT
+************
+ID  Donation
+500 123123
+453 523443
+512 236334
+123 543121
+122 662353
+473 123555
+363 987965
+986 243632
+668 333333
+555 757999
+998 153422
+173 666634
+265 286356
+789 842698
+234 347977
+************
+
+SORTED BY ID
+************
+ID  Donation
+122 662353
+123 543121
+173 666634
+234 347977
+265 286356
+363 987965
+453 523443
+473 123555
+500 123123
+512 236334
+555 757999
+668 333333
+789 842698
+986 243632
+998 153422
+************
+
+Add data? (Y/N) Y
+ID: 998
+ID: 998 already exists
+with 153422 in donations.
+
+Any more data? (Y/N) Y
+ID: 111
+Donation: 111111
+
+Any more data? (Y/N) Y
+ID: 645
+Donation: 666666
+
+Any more data? (Y/N) Y
+ID: 351
+Donation: 321234
+
+Any more data? (Y/N) Y
+ID: 898
+Donation: 888987
+
+Any more data? (Y/N) Y
+ID: 173
+ID: 173 already exists
+with 666634 in donations.
+
+Any more data? (Y/N) Y
+ID: 654
+Donation: 456654
+
+Any more data? (Y/N) Y
+ID: 444
+Donation: 444444
+
+Any more data? (Y/N) N
+
+SORTED BY ID AFTER ADDITIONS
+************
+ID  Donation
+111 111111
+122 662353
+123 543121
+173 666634
+234 347977
+265 286356
+351 321234
+363 987965
+444 444444
+453 523443
+473 123555
+500 123123
+512 236334
+555 757999
+645 666666
+654 456654
+668 333333
+789 842698
+898 888987
+986 243632
+998 153422
+************
+
+AFTER DONATION SORT
+************
+ID  Donation
+111 111111
+500 123123
+473 123555
+998 153422
+512 236334
+986 243632
+265 286356
+351 321234
+668 333333
+234 347977
+444 444444
+654 456654
+453 523443
+123 543121
+122 662353
+173 666634
+645 666666
+555 757999
+789 842698
+898 888987
+363 987965
+************
+*/

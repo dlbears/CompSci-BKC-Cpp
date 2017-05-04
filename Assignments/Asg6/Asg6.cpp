@@ -45,7 +45,7 @@ void addData (int& x, int y[], int z[]) {
     cout << "\n\nAdd data? (Y/N) ";
     cin >> response; 
     while (response == 'Y') { //add toUpper methoed
-        int id, donation, cond;
+        int id = 222, donation = 222, cond;
         cout << "\nID: ";
         cin >> id;
         cond = arrayFind(x, id, y);
@@ -54,11 +54,11 @@ void addData (int& x, int y[], int z[]) {
             cout << "\nwith " << z[cond] << " in donations.";
         } else {
             if (x < 50) {
-                x++;
                 cout << "\nDonation: ";
                 cin >> donation;
                 y[x] = id;
                 z[x] = donation;
+                x++;
             } else {
                 cout << "\nSorry no new accounts may be added.";
                 return;
@@ -67,11 +67,10 @@ void addData (int& x, int y[], int z[]) {
         cout << "\n\nAny more data? (Y/N) ";
         cin >> response;
     }
-    return;
 }
 
-int arrayFind (int x, int cond, int y[]) {
-    for (int k = 0; k < x; k++) if (y[k] == cond) return k;
+int arrayFind (int x, int cond, int q[]) {
+    for (int k = 0; k < x; k++) if (q[k] == cond) return k;
     return -1; 
 }
 

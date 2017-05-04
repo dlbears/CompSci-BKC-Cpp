@@ -1,11 +1,12 @@
 #include <fstream>
 #include <iostream>
-#include <algorithm>
 using namespace std;
 
 ifstream in("input.txt");
 void readData (int&, int[], int[]);
 void printData (int, int[], int[]);
+void addData (int&, int[], int[]);
+int arrayFind (int, int, int[]);
 
 void readData (int& x, int y[], int z[]) {
     in >> x;
@@ -23,9 +24,9 @@ void printData (int x, int y[], int z[]) {
     return;
 }
 
-void arraySort (int n, int y[], int z[]) {
-    for(int k = 0; k < n - 1; k++) {
-        for(int j = k+1; j < n; j++) { 
+void arraySort (int x, int y[], int z[]) {
+    for(int k = 0; k < x - 1; k++) {
+        for(int j = k+1; j < x; j++) { 
             if (y[k] > y[j]) {
                 int temp = y[k];
                 y[k] = y[j];
@@ -36,19 +37,64 @@ void arraySort (int n, int y[], int z[]) {
             }
         }
     }
+    return;
 }
 
-    
+void addData (int& x, int y[], int z[]) {
+    char response;
+    cout << "\n\nAdd data? (Y/N) ";
+    cin >> response; 
+    while (response == 'Y') { //add toUpper methoed
+        int id, donation, cond;
+        cout << "\nID: ";
+        cin >> id;
+        cond = arrayFind(x, id, y);
+        if (cond != -1) {
+            cout << "\nID: " << y[cond] << " already exists";
+            cout << "\nwith " << z[cond] << " in donations.";
+        } else {
+            if (x < 50) {
+                x++;
+                cout << "\nDonation: ";
+                cin >> donation;
+                y[x] = id;
+                z[x] = donation;
+            } else {
+                cout << "\nSorry no new accounts may be added.";
+                return;
+            }
+        }
+        cout << "\n\nAny more data? (Y/N) ";
+        cin >> response;
+    }
+    return;
+}
+
+int arrayFind (int x, int cond, int y[]) {
+    for (int k = 0; k < x; k++) if (y[k] == cond) return k;
+    return -1; 
+}
 
 
 int main() {
-    int n;
-    int* idNumbers = new int[n];
-    int* donations = new int[n];
+    int n, idNumbers[50], donations[50];
+    
+    cout << "\nBEFORE SORT\n";
     readData(n, idNumbers, donations);
     printData(n, idNumbers, donations);
+    
+    cout << "\n\nSORTED BY ID\n";
     arraySort(n, idNumbers, donations);
     printData(n, idNumbers, donations);
+    
+    addData(n, idNumbers, donations);
+    cout << "\n\nSORTED BY ID AFTER ADDITIONS\n";
+    printData(n, idNumbers, donations);
+    arraySort(n, idNumbers, donations);
+
+    cout << "\n\nAFTER DONATION SORT\n";
     arraySort(n, donations ,idNumbers);
     printData(n, idNumbers, donations);
+
+    return 0;
 }

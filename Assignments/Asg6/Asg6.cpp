@@ -45,7 +45,7 @@ void addData (int& x, int y[], int z[]) {
     cout << "\n\nAdd data? (Y/N) ";
     cin >> response; 
     while (response == 'Y') { //add toUpper methoed
-        int id = 222, donation = 222, cond;
+        int id, donation, cond;
         cout << "\nID: ";
         cin >> id;
         cond = arrayFind(x, id, y);

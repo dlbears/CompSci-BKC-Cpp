@@ -1,3 +1,10 @@
+/* Dennis Orsini Assignment 6
+This program reads in n pairs of data into two arrays
+then sorts the data and prints it while maintaining the pair order
+then it asks the user to input more data pairs (if there are duplicate IDs
+or more than 50 in the array the data isnt added and the user is prompted)
+Finally the program sorts the newly appended arrays by ID and then by Donation amount
+*/
 #include <fstream>
 #include <iostream>
 using namespace std;
@@ -9,6 +16,7 @@ void addData (int&, int[], int[]);
 int arrayFind (int, int, int[]);
 
 void readData (int& x, int y[], int z[]) {
+    // Read in x pairs of data into arrays pointed to by y and z
     in >> x;
     for(int k = 0; k < x; k++) {
         in >> y[k];
@@ -18,6 +26,7 @@ void readData (int& x, int y[], int z[]) {
 }
 
 void printData (int x, int y[], int z[]) {
+    // prints out x pairs of data (y - z pairs) to the console with proper headers
     cout << "************\nID  Donation\n";
     for(int k = 0; k < x; k++) cout << y[k] << " " << z[k] << "\n";
     cout << "************";
@@ -25,6 +34,10 @@ void printData (int x, int y[], int z[]) {
 }
 
 void arraySort (int x, int y[], int z[]) {
+    /* 
+    swap sorts x numbers of array pointed to by y and 
+    maintains pairings with array pointed to by z
+    */
     for(int k = 0; k < x - 1; k++) {
         for(int j = k+1; j < x; j++) { 
             if (y[k] > y[j]) {
@@ -41,10 +54,17 @@ void arraySort (int x, int y[], int z[]) {
 }
 
 void addData (int& x, int y[], int z[]) {
+    /* 
+    uses a structured read loop to read in a user defined amount 
+    of data into array pointed to by y and z
+
+    However if there are duplicate IDs or more than 50 IDs in the array
+    a prompt is returned
+    */
     char response;
     cout << "\n\nAdd data? (Y/N) ";
     cin >> response; 
-    while (response == 'Y') { //add toUpper methoed
+    while (response == 'Y' || response == 'y') {
         int id, donation, cond;
         cout << "\nID: ";
         cin >> id;
@@ -70,6 +90,10 @@ void addData (int& x, int y[], int z[]) {
 }
 
 int arrayFind (int x, int cond, int q[]) {
+    /* 
+    Utility function that looks for cond in array pointed to by q 
+    returning the index else -1 to signify not found
+    */
     for (int k = 0; k < x; k++) if (q[k] == cond) return k;
     return -1; 
 }

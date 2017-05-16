@@ -104,3 +104,98 @@ void printDate3Ways(string day, string month, string year) {
     out << yearDate << " is the full way.\n";
     return;
 }
+
+/* input.txt:
+01/5/78
+5/2/66
+01/08/16
+12/26/12
+8/15/25
+10/9/26
+12/20/97
+4/3/14
+07/09/88
+03/25/91
+1/01/01
+*/
+
+/* output.txt
+
+
+The original date is: 01/5/78
+01 is the month 5 is the day, and 78 is the year.
+5-1-78 is the European way of writing the date.
+January 5, 1978 is the American way.
+01-05-1978 is the full way.
+
+
+The original date is: 5/2/66
+5 is the month 2 is the day, and 66 is the year.
+2-5-66 is the European way of writing the date.
+May 2, 1966 is the American way.
+05-02-1966 is the full way.
+
+
+The original date is: 01/08/16
+01 is the month 08 is the day, and 16 is the year.
+8-1-16 is the European way of writing the date.
+January 8, 2016 is the American way.
+01-08-2016 is the full way.
+
+
+The original date is: 12/26/12
+12 is the month 26 is the day, and 12 is the year.
+26-12-12 is the European way of writing the date.
+December 26, 2012 is the American way.
+12-26-2012 is the full way.
+
+
+The original date is: 8/15/25
+8 is the month 15 is the day, and 25 is the year.
+15-8-25 is the European way of writing the date.
+August 15, 2025 is the American way.
+08-15-2025 is the full way.
+
+
+The original date is: 10/9/26
+10 is the month 9 is the day, and 26 is the year.
+9-10-26 is the European way of writing the date.
+October 9, 1926 is the American way.
+10-09-1926 is the full way.
+
+
+The original date is: 12/20/97
+12 is the month 20 is the day, and 97 is the year.
+20-12-97 is the European way of writing the date.
+December 20, 1997 is the American way.
+12-20-1997 is the full way.
+
+
+The original date is: 4/3/14
+4 is the month 3 is the day, and 14 is the year.
+3-4-14 is the European way of writing the date.
+April 3, 2014 is the American way.
+04-03-2014 is the full way.
+
+
+The original date is: 07/09/88
+07 is the month 09 is the day, and 88 is the year.
+9-7-88 is the European way of writing the date.
+July 9, 1988 is the American way.
+07-09-1988 is the full way.
+
+
+The original date is: 03/25/91
+03 is the month 25 is the day, and 91 is the year.
+25-3-91 is the European way of writing the date.
+March 25, 1991 is the American way.
+03-25-1991 is the full way.
+
+
+The original date is: 1/01/01
+1 is the month 01 is the day, and 01 is the year.
+1-1-01 is the European way of writing the date.
+January 1, 2001 is the American way.
+01-01-2001 is the full way.
+
+*/

@@ -1,0 +1,28 @@
+
+
+The original date is: 01/5/78
+01 is the month 5 is the day, and 78 is the year.
+5-1-78 is the European way of writing the date.
+January 5, 1978 is the American way.
+01-05-1978 is the full way.
+
+
+The original date is: 5/2/66
+5 is the month 2 is the day, and 66 is the year.
+2-5-66 is the European way of writing the date.
+May 2, 1966 is the American way.
+05-02-1966 is the full way.
+
+
+The original date is: 01/08/16
+01 is the month 08 is the day, and 16 is the year.
+8-1-16 is the European way of writing the date.
+January 8, 2016 is the American way.
+01-08-2016 is the full way.
+
+
+The original date is: 12/26/12
+12 is the month 26 is the day, and 12 is the year.
+26-12-12 is the European way of writing the date.
+December 26, 2012 is the American way.
+12-26-2012 is the full way.

@@ -38,67 +38,20 @@ void breakOriginalDate(string date, string& day, string& month, string& year) {
     return;
 }
 void printDate3Ways(string day, string month, string year) {
-    string euro, eng, engMonth, fullYear, yearDate;
-    int d = stoi(day);
-    int mon = stoi(month);
-    int yr = stoi(year);
-    
-    euro = to_string(d) + "-" + to_string(mon) + "-" + year;
-    
-    switch (mon) {
-        case 1:
-            engMonth = "January";
-            break;
-        case 2:
-            engMonth = "February";
-            break;
-        case 3:
-            engMonth = "March";
-            break;
-        case 4:
-            engMonth = "April";
-            break;
-        case 5:
-            engMonth = "May";
-            break;
-        case 6:
-            engMonth = "June";
-            break;
-        case 7:
-            engMonth = "July";
-            break;
-        case 8:
-            engMonth = "August";
-            break;
-        case 9:
-            engMonth = "September";
-            break;
-        case 10:
-            engMonth = "October";
-            break;
-        case 11:
-            engMonth = "November";
-            break;
-        case 12:
-            engMonth = "December";
-            break;
-    }
-    
-    if (yr <= 25) {
-        fullYear = "20" + year;
-    } else {
-        fullYear = "19" + year;
-    }
-    
-    eng = engMonth + " " + to_string(d) + ", " + fullYear;
-    if (mon < 10 && d < 10) {
-        yearDate = "0" + to_string(mon) + "-" + "0" + to_string(d) + "-" + fullYear;
-    } else if (mon < 10 || d < 10) {
-        yearDate = ((mon < 10) ? ("0" + to_string(mon) + "-" + day) : (month + "-" + "0" + to_string(d))) + "-" + fullYear; 
-    } else {
-        yearDate = month + "-" + day + "-" + fullYear;
-    }
-    
+    string euro, euEnDay, euroMonth, eng, engMonth, fullDay, fullMonth, fullYear, yearDate;
+    string monthsArr[12] = {"January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"};
+    int d = (day.length() == 1) ? (day[0] - '0') : ((day[0] - '0') * 10) + (day[1] - '0');
+    int mon = (month.length() == 1) ? (month[0] - '0') : ((month[0] - '0') * 10) + (month[1] - '0');
+    int yr = ((year[0] - '0') * 10) + (year[1] - '0');
+    euEnDay = (d < 10 && day.length() == 2) ? (day.substr(1, 1)) : day;
+    euroMonth = (mon < 10 && month.length() == 2) ? month.substr(1, 1) : month;
+    engMonth = monthsArr[mon - 1];
+    fullDay = (d < 10 && day.length() == 1) ? ("0" + day) : day;
+    fullMonth = (mon < 10 && month.length() == 1) ? ("0" + month) : month;
+    fullYear = (yr <= 25) ? ("20" + year) : ("19" + year);
+    euro = euEnDay + "-" + euroMonth + "-" + year;
+    eng = engMonth + " " + euEnDay + ", " + fullYear;
+    yearDate = fullMonth + "-" + fullDay + "-" + fullYear;
     out << euro << " is the European way of writing the date.\n";
     out << eng << " is the American way.\n";
     out << yearDate << " is the full way.\n";

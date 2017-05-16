@@ -17,6 +17,7 @@ int main()
       breakOriginalDate(date, day, month, year);
       printDate3Ways(day, month, year);
   } while (!in.eof());
+  return 0;
 }
 
 string readOriginalDate(void) {
@@ -82,7 +83,7 @@ void printDate3Ways(string day, string month, string year) {
             break;
     }
     
-    if (yr <= 18) {
+    if (yr <= 25) {
         fullYear = "20" + year;
     } else {
         fullYear = "19" + year;
@@ -92,7 +93,7 @@ void printDate3Ways(string day, string month, string year) {
     if (mon < 10 && d < 10) {
         yearDate = "0" + to_string(mon) + "-" + "0" + to_string(d) + "-" + fullYear;
     } else if (mon < 10 || d < 10) {
-        yearDate = ((mon < 10) ? ("0" + to_string(mon) + "-" + day) : (month + "-" + "0" + to_string(d))) + fullYear; 
+        yearDate = ((mon < 10) ? ("0" + to_string(mon) + "-" + day) : (month + "-" + "0" + to_string(d))) + "-" + fullYear; 
     } else {
         yearDate = month + "-" + day + "-" + fullYear;
     }
@@ -100,5 +101,5 @@ void printDate3Ways(string day, string month, string year) {
     out << euro << " is the European way of writing the date.\n";
     out << eng << " is the American way.\n";
     out << yearDate << " is the full way.\n";
-    
+    return;
 }
